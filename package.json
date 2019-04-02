@@ -1,0 +1,67 @@
+{
+  "name": "rating-review",
+  "version": "1.0.0",
+  "description": "",
+  "author": "john",
+  "license": "ISC",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "start": "nodemon server/index.js",
+    "dev:react": "webpack -d --watch",
+    "db:setup": "node database/seed.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@babel/core": "^7.3.3",
+    "axios": "^0.18.0",
+    "babel-jest": "^24.1.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "express": "^4.16.4",
+    "faker": "^4.1.0",
+    "jest-environment-enzyme": "^7.0.1",
+    "jest-enzyme": "^7.0.1",
+    "jquery": "^3.3.1",
+    "knex": "^0.16.3",
+    "moment": "^2.24.0",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.5",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-star-ratings": "^2.3.0",
+    "sequelize": "^4.42.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "@types/jest": "^24.0.6",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-preset-env": "^1.7.0",
+    "enzyme-to-json": "^3.3.5",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.1.0",
+    "supertest": "^3.4.2",
+    "ts-jest": "^24.0.0",
+    "typescript": "^3.3.3333",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3"
+  },
+  "jest": {
+    "setupFiles": [
+      "./test/jestsetup.js"
+    ],
+    "verbose": true,
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  }
+}
